@@ -1,0 +1,12 @@
+[package]
+name = "proton-lab-wrapper"
+version = "0.1.0"
+edition = "2024"
+
+[[bin]]
+name = "TheLab"
+path = "src/thelab.rs"
+
+[[bin]]
+name = "vr-rr"
+path = "src/robotrepair.rs"
