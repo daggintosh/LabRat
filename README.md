@@ -1,7 +1,7 @@
 # LabRat
-Set of applications to bridge the gap missing between Proton's vrclient and vrserver for switching between two different vr applications.
+Set of applications to bridge the gap between Proton's vrclient and vrserver for switching between two different vr applications.
 
-Requires custom proton to be built with IVRApplications_LaunchInternalProcess set for win to unix path conversion in vrclient_x64's gen_wrapper.py
+Requires custom proton to be built with IVRApplications_LaunchInternalProcess enabled for win to unix path conversion in vrclient_x64's gen_wrapper.py
 
 # How it works
 1. The Lab requests the OpenVR API to launch Robot Repair or Secret Shop, then closes itself.
@@ -10,7 +10,7 @@ Requires custom proton to be built with IVRApplications_LaunchInternalProcess se
 4. vr-rr uses the bare minimum set of environment variables and a command to launch the real Robot Repair in VR.
 
 # Prerequisites
-Rust, mingw-w64-gcc, and a system installation of Wine
+Rust, mingw-w64-gcc, a system installation of Wine, and Docker (for Proton)
 
 # Instructions
 1. Build and install Proton from https://github.com/daggintosh/Proton
@@ -21,8 +21,6 @@ Rust, mingw-w64-gcc, and a system installation of Wine
 7. Copy `vr-rr.exe` to `RobotRepair/bin/win64` and rename it to `vr.exe`.
 
 # Known Issues
-Overlays aren't reset after transitions.
-
-Settings from TheLab aren't carried over to their respective apps.
-
-I haven't added SecretShop yet.
+- Overlays aren't reset after transitions.
+- Settings from the hub aren't carried over to either Source 2 app.
+- I haven't added SecretShop yet.
