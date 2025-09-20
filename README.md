@@ -22,3 +22,7 @@ Rust, mingw-w64-gcc, and a system installation of Wine
 
 # Known Issues
 Overlays aren't reset after transitions.
+
+Settings from TheLab aren't carried over to their respective apps.
+
+I haven't added SecretShop yet.
